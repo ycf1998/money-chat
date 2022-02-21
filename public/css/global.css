@@ -1,0 +1,234 @@
+  #MoneyChat * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+  }
+
+  #MoneyChat .fr {
+      float: right;
+  }
+
+  #MoneyChat .fl {
+      float: left;
+  }
+
+  #MoneyChat .text-right {
+      text-align: right;
+  }
+
+  #MoneyChat .text-left {
+      text-align: left;
+  }
+
+  #MoneyChat .text-center {
+      text-align: center;
+  }
+
+  #MoneyChat li {
+      list-style: none;
+  }
+
+  /* ================= 通用/组件 ===================== */
+  /* 用户卡片-图文混排 */
+  #MoneyChat .user-card {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+  }
+
+  #MoneyChat .user-card img.user-avatar {
+      border-radius: 100%;
+      width: 50px;
+      height: 50px;
+      margin: 0 10px;
+  }
+
+  #MoneyChat .user-card div.info {
+      display: flex;
+      flex-direction: column;
+  }
+
+  #MoneyChat .user-card div.title {
+      display: flex;
+  }
+
+  #MoneyChat .user-card name {
+      display: block;
+      max-width: 100px;
+      margin-right: 10px;
+      font-size: 16px;
+      font-family: -webkit-pictograph;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      cursor: default;
+  }
+
+  #MoneyChat .user-card small {
+      display: block;
+      font-family: -webkit-pictograph;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }
+
+  /* 聊天信息-图文混排 */
+  #MoneyChat .mc-media {
+      display: flex;
+      padding: 5px;
+  }
+
+  #MoneyChat .mc-media.reverse {
+      flex-direction: row-reverse;
+  }
+
+  #MoneyChat .mc-media>img {
+      border-radius: 100%;
+      width: 35px;
+      height: 35px;
+      margin: 8px 10px;
+  }
+
+  #MoneyChat .mc-media .mc-media-content {
+      position: relative;
+      width: calc(100% - 100px);
+  }
+
+  #MoneyChat .mc-media .mc-media-banner {
+      visibility: hidden;
+      display: block;
+  }
+
+  #MoneyChat .mc-media .mc-media-manage {
+      text-align: justify;
+      display: inline-block;
+  }
+
+  /* 布局 */
+  #MoneyChat .mc-header {
+      width: 100%;
+      background-color: rgba(0, 0, 0, .03);
+      border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+      border-bottom: 1px solid rgba(0, 0, 0, .125);
+  }
+
+  #MoneyChat .mc-header .user-card {
+      padding: 10px 0;
+  }
+
+  #MoneyChat .mc-body {}
+
+  #MoneyChat .mc-footer {
+      background-color: rgba(0, 0, 0, .03);
+      border-top: 1px solid rgba(0, 0, 0, .125);
+  }
+
+  /* 输入框组 */
+  #MoneyChat .input-group {
+      display: flex;
+      flex-wrap: nowrap;
+  }
+
+  #MoneyChat .input-prepend {
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+      padding: .375rem .75rem;
+      margin-bottom: 0;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #495057;
+      text-align: center;
+      white-space: nowrap;
+      background-color: #e9ecef;
+      border: 1px solid #ced4da;
+  }
+
+  #MoneyChat .input-group .form-control {
+      width: 100%;
+      height: calc(1.5em + .75rem + 2px);
+      padding: .375rem .75rem;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #495057;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid #ced4da;
+      transition: border-color .15s ease-in-out,
+          box-shadow .15s ease-in-out;
+  }
+
+  /* 拖拽附着 */
+  #MoneyChat .drag-line-x {
+      position: absolute;
+      width: 100%;
+      height: 10px;
+  }
+
+  #MoneyChat .drag-line-y {
+      position: absolute;
+      height: 100%;
+      width: 10px;
+  }
+
+  /* 描述字体 */
+  #MoneyChat .text-muted {
+      color: #6c757d !important;
+  }
+
+  #MoneyChat .small,
+  small {
+      font-size: 75%;
+      font-weight: 400;
+  }
+
+  /* 关闭按钮 */
+  #MoneyChat button.close {
+      padding: 0;
+      background-color: transparent;
+      border: 0;
+  }
+
+  #MoneyChat .mc-header .close {
+      padding: .2rem .5rem;
+      margin: -1px;
+  }
+
+  #MoneyChat .close {
+      float: right;
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 1;
+      color: #000;
+      text-shadow: 0 1px 0 #fff;
+      opacity: .5;
+  }
+
+  /* 滚动条 */
+  #MoneyChat .scroll::-webkit-scrollbar {
+      /*滚动条整体样式*/
+      width: 3.5px;
+      /*高宽分别对应横竖滚动条的尺寸*/
+      height: 1px;
+  }
+
+  #MoneyChat .scroll::-webkit-scrollbar-thumb {
+      /*滚动条里面小方块*/
+      border-radius: 10px;
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+      background: darkturquoise;
+  }
+
+  #MoneyChat .scroll::-webkit-scrollbar-track {
+      /*滚动条里面轨道*/
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      background: #ededed;
+  }
+
+  /* 新信息 */
+  #MoneyChat .newMsg {
+      border: 2px solid rgb(187, 219, 136) !important;
+  }

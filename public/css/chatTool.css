@@ -1,0 +1,20 @@
+ /*工具栏*/
+ #MoneyChat #chatTool-menu {
+ 	background-color: rgba(0, 0, 0, .07);
+ 	height: 25px;
+ }
+
+ #MoneyChat #chatTool-menu span {
+ 	cursor: pointer;
+ 	padding: 0 5px;
+ }
+
+ #MoneyChat #chatTool-centent.active {
+ 	display: block !important;
+ }
+
+ #MoneyChat #chatTool-centent div {}
+
+ #MoneyChat #chatTool-centent div.active {
+ 	display: block !important;
+ }

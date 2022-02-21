@@ -1,0 +1,130 @@
+  <link href="{{path}}/public/css/global.css" type="text/css" rel="stylesheet" />
+  <link href="{{path}}/public/css/index.css" type="text/css" rel="stylesheet" />
+  <link href="{{path}}/public/css/chatTool.css" type="text/css" rel="stylesheet" />
+  <div id="MoneyChat">
+      <!-- MoneyChat盒子 -->
+      <div id="moneyBox">
+          <!-- 好友列表盒 -->
+          <div id="mcBox">
+              <div class="drag drag-line-x"></div>
+              <div class="mc-header">
+                  <button class="close" onclick="toggleBox(this, event)">×</button>
+                  <div class="user-card">
+                      <img mc-avatar class="user-avatar drag" src="https://s1.ax1x.com/2020/10/24/BZsVjP.jpg">
+                      <div class="info">
+                          <div class="title">
+                              <name title="Money" mc-name>Money</name>
+                              <div></div>
+                          </div>
+                          <small class="text-muted"></small>
+                      </div>
+                  </div>
+                  <!-- 搜索框 -->
+                  <div class="input-group">
+                      <div class="input-prepend">
+                          <span>☺</span>
+                      </div>
+                      <input type="text" class="searchInput form-control" placeholder="搜索"
+                          oninput="$search(this.value)">
+                  </div>
+              </div>
+              <div class="mc-body">
+                  <!-- 聊天对象选项卡 -->
+                  <ul class="nav-tabs">
+                      <li class="nav-item">
+                          <a class="nav-link active" href="javascript:;" aria-controls="online">在线</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="javascript:;" aria-controls="friends">好友</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="javascript:;" aria-controls="rooms">群组</a>
+                      </li>
+                  </ul>
+                  <!-- 选项卡内容 -->
+                  <div class="tab-content scroll">
+                      <div id='searchResult'></div>
+                      <div class="tab-pane active" aria-labelledby="online-tab"></div>
+                      <div class="tab-pane" aria-labelledby="friends-tab"></div>
+                      <div class="tab-pane" aria-labelledby="rooms-tab"></div>
+                  </div>
+              </div>
+              <div class="mc-footer">
+                  <div class="drag drag-line-x"></div>
+                  <span onclick="openExt('joinRoom')">👨‍👩‍👧‍👦</span>
+              </div>
+
+          </div>
+          <!-- 迷你盒 -->
+          <div id="mcMinBox" onclick="toggleBox(this, event)">
+              <div class="user-card">
+                  <img mc-avatar class="user-avatar drag" src="https://s1.ax1x.com/2020/10/24/BZsVjP.jpg">
+                  <div class="info">
+                      <div class="title">
+                          <name title="Money" mc-name>Money</name>
+                          <div></div>
+                      </div>
+                      <small class="text-muted"></small>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- 聊天窗 -->
+      <div id="chatWindow" style="display:flexd">
+          <!-- 在聊列表 -->
+          <div class="mc-chat-session scroll"></div>
+          <div class="mc-container">
+              <!-- 聊天窗口头部 -->
+              <div class="mc-header">
+                  <div class="drag drag-line-x"></div>
+                  <button class="close" onclick="closeChatWindow()">×</button>
+                  <div class="user-card">
+                      <img class="user-avatar" src="https://s1.ax1x.com/2020/10/24/BZsVjP.jpg">
+                      <div class="info">
+                          <div class="title">
+                              <name title="Money" style="max-width: 200px;">Money</name>
+                              <div></div>
+                          </div>
+                          <small class="text-muted"></small>
+                      </div>
+                  </div>
+              </div>
+              <!-- 聊天记录窗口 -->
+              <div id="chatBoxList" class="mc-body"></div>
+              <!-- 聊天功能体 -->
+              <div class="mc-footer">
+                  <div id="chatTool">
+                      <div id="chatTool-centent"
+                          style="display: none;min-width: 200px;position: absolute;border: 1px solid #ccc;bottom: 110px;">
+                      </div>
+                      <div id="chatTool-menu">
+                          <span class="emoji" show-tool="ct-emoji">😀</span>
+                      </div>
+                  </div>
+                  <textarea type="text" id="moneyChatInput" name="message" placeholder="ctrl + 空格 隐藏聊天哦"></textarea>
+                  <button id="sendGo">发送</button>
+              </div>
+          </div>
+      </div>
+      <!-- 扩展框 -->
+      <div id="ext">
+          <div class="mc-header">
+              <div class="drag drag-line-x"></div>
+              <button class="close" onclick="closeExt()">×</button>
+          </div>
+          <div class="mc-body">
+              <!-- 加入聊天室 -->
+              <div class="func-joinRoom">
+                  <div class="input-group">
+                      <div class="input-prepend">
+                          <span>☺</span>
+                      </div>
+                      <input id='roomSearch' type="text" class="form-control" placeholder="加入聊天室(回车加入)">
+                  </div>
+                  <span style="margin-right: 10px;"></span>
+                  <input name="roomType" type="radio" value="public" checked> 公开
+                  <input name="roomType" type="radio" value="private"> 私有
+              </div>
+          </div>
+      </div>
+  </div>

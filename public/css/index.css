@@ -1,0 +1,289 @@
+  /*====================== 聊天盒子 =========================*/
+  #MoneyChat #moneyBox {
+      position: fixed;
+      /* background-color: white; */
+      z-index: 1024;
+      border: 1px solid #D9D9D9;
+      right: 50px;
+      bottom: 20px;
+      width: 210px;
+      height: 70px;
+  }
+
+  /* 迷你盒 */
+  #MoneyChat #moneyBox #mcMinBox {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+
+  }
+
+  /* 好友列表盒*/
+  #MoneyChat #moneyBox #mcBox {
+      display: none;
+      position: relative;
+      border: 1px solid #D9D9D9;
+      background-color: #fff;
+      width: 250px;
+      height: 450px;
+      margin-left: -39px;
+      margin-top: -379px;
+  }
+
+  /* 好友列表盒-头部 */
+  #MoneyChat #moneyBox #mcBox .mc-header .input-prepend {
+      border: none;
+      border-top: 1px solid #ced4da;
+  }
+
+  #MoneyChat #moneyBox #mcBox .mc-header .searchInput {
+      border: none;
+      border-top: 1px solid #ced4da;
+      border-left: 1px solid #ced4da;
+  }
+
+  /* 好友列表盒-主体 */
+  #MoneyChat #moneyBox #mcBox .mc-body {
+      width: 100%;
+      padding-bottom: 5px;
+  }
+
+  #MoneyChat #moneyBox #mcBox .mc-footer span {
+      cursor: pointer;
+  }
+
+  /* 聊天对象选项卡 */
+  #MoneyChat #moneyBox #mcBox .nav-tabs {
+      display: flex;
+      flex-direction: row;
+  }
+
+  #MoneyChat #moneyBox #mcBox .nav-tabs .nav-item {
+      flex: 1;
+      text-align: center;
+      padding: 10px;
+  }
+
+  #MoneyChat #moneyBox #mcBox .nav-tabs .nav-link {
+      text-decoration: none;
+      padding: 10px;
+      color: #495057;
+      background-color: #fff;
+      border-color: #dee2e6 #dee2e6 #fff;
+  }
+
+  #MoneyChat #moneyBox #mcBox .nav-tabs .nav-link.active {
+      text-decoration: none;
+      padding: 10px;
+      color: #495057;
+      background-color: #fff;
+      border-bottom: 1px solid;
+      border-color: cornflowerblue;
+  }
+
+  /* 搜索结果 */
+  #MoneyChat #moneyBox #mcBox #searchResult {
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 260px;
+      background: #fff;
+  }
+
+  /* 选项卡内容 */
+  #MoneyChat #moneyBox #mcBox .tab-content {
+      padding: 5px;
+      overflow: auto;
+      height: 265px;
+  }
+
+  #MoneyChat #moneyBox #mcBox .tab-content .tab-pane {
+      display: none;
+  }
+
+  #MoneyChat #moneyBox #mcBox .tab-content .tab-pane.active {
+      display: block;
+  }
+
+  /* 好友列表 */
+  #MoneyChat #moneyBox .tab-content .user-card {
+      margin: 3px 0;
+      padding: 2px 0;
+      border: 1px solid rgba(0, 0, 0, .125);
+  }
+
+  #MoneyChat #moneyBox .tab-content .user-card img.user-avatar {
+      width: 35px;
+      height: 35px;
+      flex: 0 1 35px;
+  }
+
+  #MoneyChat #moneyBox .tab-content .user-card div.info {
+      flex: 0 1 150px;
+  }
+
+  #MoneyChat #moneyBox .tab-content .user-card div.info name {
+      font-size: smaller;
+  }
+
+  #MoneyChat #moneyBox .tab-content .user-card div.opt {
+      flex: 1;
+  }
+
+  #MoneyChat #moneyBox .tab-content .user-card div.opt span {
+      cursor: pointer;
+  }
+
+  /* ======================= 聊天窗 ========================= */
+  #MoneyChat #chatWindow {
+      position: fixed;
+      background: white;
+      border: 1px solid #D9D9D9;
+      margin: 0;
+      width: 650px;
+      height: 420px;
+      top: 80px;
+      left: 467px;
+      min-width: 600px;
+      min-height: 420px;
+      display: none;
+      flex-direction: row;
+      resize: both;
+      overflow: hidden;
+      z-index: 1024;
+  }
+
+  #MoneyChat #chatWindow.active {
+      display: flex;
+  }
+
+  #MoneyChat #chatWindow .mc-chat-session {
+      border-right: 1px solid #D9D9D9;
+      height: 100%;
+      width: 150px;
+  }
+
+  /* 聊天会话 */
+  #MoneyChat #chatWindow .mc-chat-session .user-card {
+      margin: 3px 0;
+      padding: 2px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, .125);
+  }
+
+  #MoneyChat #chatWindow .mc-chat-session .user-card.active {
+      display: flex;
+      border-left: 2px solid cornflowerblue;
+  }
+
+  #MoneyChat #chatWindow .mc-chat-session .user-card img.user-avatar {
+      width: 35px;
+      height: 35px;
+      flex: 0 1 35px;
+  }
+
+  #MoneyChat #chatWindow .mc-chat-session .user-card div.info {
+      flex: 0 1 80px;
+  }
+
+  #MoneyChat #chatWindow .mc-chat-session .user-card div.info name {
+      font-size: smaller;
+      max-width: 70px;
+  }
+
+  #MoneyChat #chatWindow .mc-chat-session .user-card div.opt {
+      flex: 1;
+  }
+
+  #MoneyChat #chatWindow .mc-chat-session .user-card div.opt span {
+      cursor: pointer;
+  }
+
+  #MoneyChat #chatWindow .mc-container {
+      display: flex;
+      flex-direction: column;
+      width: calc(100% - 150px);
+      height: 100%;
+  }
+
+  #MoneyChat #chatWindow .mc-header {
+      flex: 0 0 70px;
+  }
+
+  #MoneyChat #chatWindow .mc-body {
+      flex: 1 1 auto;
+      height: calc(100% - 190px);
+  }
+
+  #MoneyChat #chatWindow .mc-footer {
+      flex: 0 0 110px;
+  }
+
+  /* 聊天记录窗口 */
+  #MoneyChat #chatWindow #chatBoxList .chat-box {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: none;
+      overflow: auto;
+  }
+
+  #MoneyChat #chatWindow #chatBoxList .chat-box.active {
+      display: block;
+  }
+
+  /* 输入框 */
+  #MoneyChat #chatWindow #moneyChatInput {
+      z-index: 1024;
+      width: 100%;
+      height: calc(100% - 25px);
+      padding: .1rem;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #495057;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: none;
+      transition: border-color .15s ease-in-out,
+          box-shadow .15s ease-in-out;
+  }
+
+  /* 发送按钮 */
+  #MoneyChat #chatWindow #sendGo {
+      position: absolute;
+      right: 15px;
+      bottom: 5px;
+      width: 50px;
+      border: 1px solid rgba(0, 0, 0, .125);
+      border-radius: 10em;
+  }
+
+  /*=================== 扩展框 ===================*/
+  #MoneyChat #ext {
+      position: fixed;
+      background: white;
+      border: 1px solid #D9D9D9;
+      margin: 0;
+      width: 500px;
+      min-height: 100px;
+      top: 80px;
+      left: 467px;
+      display: none;
+      flex-direction: column;
+      resize: both;
+      overflow: hidden;
+      z-index: 1024;
+  }
+
+  #MoneyChat #ext.active {
+      display: flex;
+  }
+
+  #MoneyChat #ext .mc-body>div {
+      display: none;
+  }
+
+   #MoneyChat #ext .mc-body>div.active {
+       display: block;
+   }
